@@ -1,12 +1,96 @@
-# React + Vite
+CGCian-GPT: AI-Powered Employee Helpdesk (React Version)
+CGCian-GPT is a modern, AI-powered chatbot designed to serve as a first line of IT support for employees. It leverages Google's Gemini API to provide instant answers from a knowledge base and intelligently create detailed IT tickets when human intervention is required. This prototype was built for a hackathon to showcase a solution for process automation and employee experience enhancement.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+Conversational AI: Natural language understanding to answer a wide range of IT questions.
 
-Currently, two official plugins are available:
+Knowledge Base Integration: Instantly provides solutions for common issues based on a pre-defined knowledge base.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Intelligent Ticket Creation: Guides users through a multi-step process to gather necessary details (summary, category, urgency) for a perfect IT ticket.
 
-## Expanding the ESLint configuration
+Advanced UI/UX:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Light & Dark Mode: Toggle between themes for user comfort.
+
+Persistent Chat History: Conversations are saved to local storage, so you never lose your place.
+
+Markdown & Code Formatting: Renders AI responses with rich text and provides a copy button for code snippets.
+
+Typing Indicators & Timestamps: A polished and intuitive chat experience.
+
+Responsive Design: Fully usable on desktop and mobile devices.
+
+🛠️ Tech Stack
+Frontend: React (with Hooks)
+
+Styling: Tailwind CSS
+
+AI Model: Google Gemini API
+
+Build Tool: Vite
+
+Package Manager: NPM
+
+Version Control: Git
+
+🚀 Getting Started
+Follow these instructions to set up and run the project on your local machine for development and testing purposes.
+
+Prerequisites
+You must have Node.js (which includes npm) installed on your computer. Version 18.x or higher is recommended.
+
+You can verify your installation by running:
+
+node -v
+npm -v
+
+1. Clone the Repository
+First, clone this repository to your local machine.
+
+git clone [https://github.com/your-username/cgciangpt-helpdesk.git](https://github.com/your-username/cgciangpt-helpdesk.git)
+cd cgciangpt-helpdesk
+
+2. Install Dependencies
+Install all the necessary project dependencies using npm.
+
+npm install
+
+3. Configure Your API Key
+The application requires a Google Gemini API key to function.
+
+Get your key: Visit Google AI Studio to create your free API key.
+
+Add the key to the project:
+
+Open the src/App.jsx file.
+
+Find the line: const GEMINI_API_KEY = "PASTE_YOUR_GOOGLE_AI_API_KEY_HERE";
+
+Replace the placeholder text with your actual API key, keeping the quotation marks.
+
+// Example:
+const GEMINI_API_KEY = "AIzaSy...your...long...api...key...here...";
+
+4. Run the Development Server
+You are now ready to run the application!
+
+npm run dev
+
+This command will start the Vite development server. Open your web browser and navigate to the local URL provided in the terminal (usually http://localhost:5173/).
+
+📂 Project Structure
+cgc_project/
+├── node_modules/       # Project dependencies
+├── public/             # Static assets
+├── src/
+│   ├── assets/         # Images, fonts, etc.
+│   ├── App.jsx         # The main React component containing all logic and UI
+│   ├── index.css       # Main stylesheet with Tailwind directives
+│   └── main.jsx        # The entry point of the React application
+├── .eslintrc.cjs       # ESLint configuration
+├── .gitignore          # Files to be ignored by Git
+├── index.html          # The main HTML template
+├── package.json        # Project metadata and dependencies
+├── postcss.config.js   # PostCSS configuration for Tailwind
+├── README.md           # You are here!
+└── tailwind.config.js  # Tailwind CSS configuration
